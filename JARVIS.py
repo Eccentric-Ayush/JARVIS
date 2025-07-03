@@ -2,6 +2,7 @@ import pyttsx3 #pip install pyttsx3
 import speech_recognition as sr #pip install speechRecognition
 import datetime
 import wikipedia #pip install wikipedia
+import pyjokes #pip install pyjokes
 import webbrowser
 import os
 import smtplib
@@ -170,6 +171,11 @@ if __name__ == "__main__":
 
         elif 'I am fine' in query:
             speak("Alright sir, what can I do for you!")
+
+        elif 'tell me a joke' in query:
+            joke = pyjokes.get_joke()
+            print(joke)
+            speak(joke)
 
         elif 'exit' in query:
             speak("Thankyou sir, Nice to talk to you")
