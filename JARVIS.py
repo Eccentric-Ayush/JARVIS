@@ -11,6 +11,8 @@ engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 # print(voices[1].id)
 engine.setProperty('voice', voices[0].id)
+engine.setProperty('rate', 150)  # Speed of speech
+engine.setProperty('volume', 0.8)  # Volume level (0.0 to 1.0)
 
 def speak(audio):
     engine.say(audio)
